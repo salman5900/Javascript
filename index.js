@@ -28,4 +28,4 @@ while (isSunk === false) {
 }
 
 var status = `YOu Took ${guesses} guesses to sink the ship which means your shooting acuracy is ${3/guesses}`
-alert(status);              
+alert(status);
