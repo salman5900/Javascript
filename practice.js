@@ -32,10 +32,27 @@
 
 //-------------------------------------------
 
-function doIt(param) {
-    param = 2;
+// function doIt(param) {
+//     param = 2;
+// }
+
+// var test = 1;
+// doIt(test);
+// console.log(test);
+
+// ----------------------------------------------
+
+function jiayan(eating, weight) {
+    if(eating > 3 && eating < 6) {
+        weight += 1; 
+    }
+    else if (eating < 3) {
+        weight -= 1;
+    }
+    else{
+        weight += 5;
+    }
+    return weight
 }
 
-var test = 1;
-doIt(test);
-console.log(test);
+console.log(jiayan(9,0));
