@@ -58,16 +58,42 @@
 // console.log(jiayan(9,0));
 // ---------------------------------------------
 
-var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
-              34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61,
-              46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44];
+// var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
+//               34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61,
+//               46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44];
 
-var output;
+// var output;
 
-var i = 0;
+// var i = 0;
 
-while(i < scores.length) {
-    output = `Bobble solution #${i} socres: ${scores[i]}`;
-    console.log(output);
-    i += 1;
+// while(i < scores.length) {
+//     output = `Bobble solution #${i} socres: ${scores[i]}`;
+//     console.log(output);
+//     i += 1;
+// }
+// ----------------------------------------------
+
+// var i = 0;
+
+// var hasBubbleGum = [false, false, false, true];
+
+// var products = ["Choo Choo Chocolate","Icy Mint", "Cake Batter","Bubblegum"];
+
+// while (i < hasBubbleGum.length) {
+//    if (hasBubbleGum[i]) {
+//     console.log(products[i] + " contains bubble gum");
+//     i = i + 1;
+//    }
+
+// }
+// ---------------------------------------------------
+
+var products = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter", "Bubblegum"];
+var hasBubbleGum = [false, false, false, true];
+
+for (let i = 0; i < hasBubbleGum.length; i++) {
+    if (hasBubbleGum[i]) {
+        console.log(products[i] + " contains bubble gum");
+    }
+    
 }
