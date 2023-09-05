@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <!-- Add this to your HTML head section -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h1 style="            /* Add your custom styles here */
+                color: #333; /* Change text color */
+                text-align: center; /* Center-align the text */
+                font-size: 36px; /* Adjust font size */
+                font-weight: bold; /* Make the text bold */
+                margin-top: 20px; /* Add margin to the top */">Enter Temperature</h1>
+                <label>Convert to:</label>
+                <input class="form-control rounded" type="text" id="enterTemp"><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <input  type="radio" name="unit" id="celsius">
+                <label>Celsius</label><br><br>
+                <input type="radio" name="unit" id="fahrenheit">
+                <label>Fahrenheit</label><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <button class="btn btn-primary" id="submit">Submit</button><br><br>
+                <label id="tempLabel"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include jQuery and Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your JavaScript code -->
+    <script>
+        document.getElementById('submit').onclick = () => {
+            let temp = parseFloat(document.getElementById('enterTemp').value);
+            let celsiusRadio = document.getElementById('celsius');
+            let fahrenheitRadio = document.getElementById('fahrenheit');
+            
+            if (celsiusRadio.checked) {
+                temp = (temp - 32) * (5/9);
+                document.getElementById('tempLabel').textContent = temp.toFixed(2) + "°C";
+            } else if (fahrenheitRadio.checked) {
+                temp = (temp * 9/5) + 32;
+                document.getElementById('tempLabel').textContent = temp.toFixed(2) + "°F";
+            }
+            else{
+                document.getElementById('tempLabel').textContent = `I will convert this ${temp} to what pic one!`;
+            }
+        }
+    </script>
+</body>
+</html>
